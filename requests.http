@@ -16,3 +16,6 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### EVENTS INDEX
+
+GET http://localhost:3000/events.json
