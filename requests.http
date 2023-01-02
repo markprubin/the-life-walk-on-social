@@ -1,3 +1,6 @@
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI3ODE2Njl9.FF457b5ZcaxIApP2Bud6y3wsxxX7bACumRlI-aepAA0
+@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzI3ODEwMzJ9.0RlJh20LCJPzbCUszDNOmqu8qjsW9HTY9115WFQtBs0
+
 ### USERS INDEX 
 
 GET http://localhost:3000/users.json
@@ -16,6 +19,54 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### SESSIONS CREATE (LOG IN)
+
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "mark@example.com",
+  "password": "password"
+}
+
 ### EVENTS INDEX
 
 GET http://localhost:3000/events.json
+
+### EVENTS CREATE
+
+POST http://localhost:3000/events.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
+
+{
+    "name": "Test Event",
+    "description": "Test Text",
+    "address": "1234 N Happy Rd, Phoenix, AZ 85251",
+    "image_url": "www.google.com" ,
+    "start_time": "2023-04-01",
+    "end_time": "2023-04-02"
+}
+
+### EVENTS UPDATE
+
+PATCH http://localhost:3000/events/2.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
+
+{
+    "name": "Test",
+    "description": "Test Text",
+    "address": "1234 N Happy Rd, Phoenix, AZ 85251",
+    "image_url": "www.yahoo.com",
+    "start_time": "2023-04-01",
+    "end_time": "2023-04-02"
+}
+
+
+### EVENTS DESTROY
+
+
+DELETE http://localhost:3000/events/1.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
