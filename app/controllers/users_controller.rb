@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-  # before_action :authenticate_admin, except: [:create, :destroy]
-
-
   def index
     @users = User.all
     render :index
