@@ -14,4 +14,6 @@ def favorite_count
   favorites.count
 end
 
+
+
 end

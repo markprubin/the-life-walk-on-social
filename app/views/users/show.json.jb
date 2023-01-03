@@ -1,0 +1,5 @@
+{
+  id: @user.id,
+  name: @user.full_name,
+  favorited_events: @user.favorite_events
+}
