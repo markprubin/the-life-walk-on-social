@@ -39,7 +39,7 @@ class EventsController < ApplicationController
     event.address = params["address"] || event.address
     event.image_url = params["image_url"] || event.image_url
     event.start_time = params["start_time"] || event.start_time
-    event.end_time = params["image_url"] || event.image_url
+    event.end_time = params["end_time"] || event.end_time
 
     if event.save
       render json: event.as_json

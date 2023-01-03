@@ -1,5 +1,5 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4NTgyNDR9.z9vI9stsOotQI7DT8pN7evjrCs_P3oRluvXYYsac-1Y
-@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzI4NTkwODh9.TYoDOHzCK0SGnK-r6zjDyQ4hGGpErVUlmVAYZ84S__w
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
+@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
 
 ### USERS INDEX 
 
@@ -12,9 +12,9 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "first_name": "George",
-  "last_name": "Washington",
-  "email": "George@example.com",
+  "first_name": "Amanda",
+  "last_name": "HaleNo",
+  "email": "amanda@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -39,7 +39,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "adam@example.com",
+  "email": "amanda@example.com",
   "password": "password"
 }
 
@@ -54,7 +54,7 @@ Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
 {
-    "name": "Inaugural TLWO Meeting",
+    "name": "Third TLWO Meeting",
     "description": "Test Text",
     "address": "999 W Sun St., Phoenix, AZ 85251",
     "image_url": "www.google.com" ,
@@ -64,12 +64,12 @@ Authorization: Bearer {{admin-jwt}}
 
 ### EVENTS UPDATE
 
-PATCH http://localhost:3000/events/1.json
+PATCH http://localhost:3000/events/6.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
 {
-    "name": "Test 2",
+    "name": "Test 3",
     "description": "Test Text",
     "address": "1234 N Happy Rd, Phoenix, AZ 85251",
     "image_url": "www.google.com" ,
@@ -81,7 +81,7 @@ Authorization: Bearer {{admin-jwt}}
 ### EVENTS DESTROY
 
 
-DELETE http://localhost:3000/events/2.json
+DELETE http://localhost:3000/events/6.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
@@ -89,20 +89,22 @@ Authorization: Bearer {{admin-jwt}}
 ### FAVORITE INDEX
 
 GET http://localhost:3000/favorites.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
 
 ### FAVORITE CREATE
 
 POST http://localhost:3000/favorites.json
 Content-Type: application/json
-Authorization: Bearer {{user-jwt}}
+Authorization: Bearer {{admin-jwt}}
 
 {
-  "event_id": 3
+  "event_id": 5
 }
 
 ### FAVORITE DESTROY
 
-DELETE http://localhost:3000/favorites/1.json
+DELETE http://localhost:3000/favorites/6.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
