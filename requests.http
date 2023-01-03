@@ -1,5 +1,5 @@
 @admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4NTgyNDR9.z9vI9stsOotQI7DT8pN7evjrCs_P3oRluvXYYsac-1Y
-@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzI4NTczNTJ9.ClJYlay7fPIzJHZD7euEXZ3ShH1kwEUWuFQ5oyihmTI
+@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzI4NTkwODh9.TYoDOHzCK0SGnK-r6zjDyQ4hGGpErVUlmVAYZ84S__w
 
 ### USERS INDEX 
 
@@ -12,9 +12,9 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "first_name": "Test",
-  "last_name": "User",
-  "email": "test@test.com",
+  "first_name": "George",
+  "last_name": "Washington",
+  "email": "George@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -39,7 +39,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "mark@example.com",
+  "email": "john@example.com",
   "password": "password"
 }
 
@@ -94,10 +94,10 @@ GET http://localhost:3000/favorites.json
 
 POST http://localhost:3000/favorites.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{user-jwt}}
 
 {
-  "event_id": 4
+  "event_id": 3
 }
 
 ### FAVORITE DESTROY

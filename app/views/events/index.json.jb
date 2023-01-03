@@ -5,7 +5,9 @@
     description: event.description,
     address: event.address,
     image_url: event.image_url,
-    start_time: event.start_time,
-    end_time: event.end_time
+    start: event.start_event,
+    end: event.end_event,
+    favorites: event.favorite_count,
+    favorites_list: event.favorites
   }
 end
