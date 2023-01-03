@@ -1,4 +1,4 @@
-@events.map.do |event|
+@events.map do |event|
   {
     id: event.id,
     name: event.name,
@@ -8,5 +8,4 @@
     start_time: event.start_time,
     end_time: event.end_time
   }
-
 end

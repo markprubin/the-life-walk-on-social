@@ -3,13 +3,13 @@ class EventsController < ApplicationController
 
 
   def index
-    events = Event.all
-    render json: events.as_json
+    @events = Event.all
+    render :index
   end 
 
   def show
-    event = Event.find_by(id: params["id"])
-    render kson: event.as_json
+    @event = Event.find_by(id: params[:id])
+    render :show
   end
 
   def create
@@ -50,7 +50,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    event = Event.find_by(id: params["id"])
+    event = Event.find_by(id: params[:id])
     event.destroy
     render json: {message: "Event successfully removed."}
   end

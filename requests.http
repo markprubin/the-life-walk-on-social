@@ -1,5 +1,5 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI3ODE2Njl9.FF457b5ZcaxIApP2Bud6y3wsxxX7bACumRlI-aepAA0
-@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzI3ODEwMzJ9.0RlJh20LCJPzbCUszDNOmqu8qjsW9HTY9115WFQtBs0
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4NTgyNDR9.z9vI9stsOotQI7DT8pN7evjrCs_P3oRluvXYYsac-1Y
+@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzI4NTczNTJ9.ClJYlay7fPIzJHZD7euEXZ3ShH1kwEUWuFQ5oyihmTI
 
 ### USERS INDEX 
 
@@ -54,9 +54,9 @@ Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
 {
-    "name": "Test Event",
+    "name": "Inaugural TLWO Meeting",
     "description": "Test Text",
-    "address": "1234 N Happy Rd, Phoenix, AZ 85251",
+    "address": "999 W Sun St., Phoenix, AZ 85251",
     "image_url": "www.google.com" ,
     "start_time": "2023-04-01",
     "end_time": "2023-04-02"
@@ -64,7 +64,7 @@ Authorization: Bearer {{admin-jwt}}
 
 ### EVENTS UPDATE
 
-PATCH http://localhost:3000/events/3.json
+PATCH http://localhost:3000/events/1.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
@@ -81,6 +81,28 @@ Authorization: Bearer {{admin-jwt}}
 ### EVENTS DESTROY
 
 
-DELETE http://localhost:3000/events/1.json
+DELETE http://localhost:3000/events/2.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
+
+
+### FAVORITE INDEX
+
+GET http://localhost:3000/favorites.json
+
+### FAVORITE CREATE
+
+POST http://localhost:3000/favorites.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
+
+{
+  "event_id": 4
+}
+
+### FAVORITE DESTROY
+
+DELETE http://localhost:3000/favorites/1.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
+

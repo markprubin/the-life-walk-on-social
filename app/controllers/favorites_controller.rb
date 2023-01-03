@@ -1,28 +1,26 @@
 class FavoritesController < ApplicationController
-  before_action :authenticate_user
-
-
+ 
   def index
     favorites = Favorite.all
     render json: favorites.as_json
   end
 
   def create
-    favorites = Favorite.new(
+    favorite = Favorite.new(
     user_id: current_user.id,
     event_id: params[:event_id],
-    status: "added",
     )
-    if favorites.save
+    if favorite.save
       render json: { message: "Event favorited" }, status: :created
     else
-      render json: { errors: favorites.errors.full_messages }, status: :bad_request
+      render json: { errors: favorite.errors.full_messages }, status: :bad_request
+    end
   end
 
   def destroy
     favorites = Favorite.find_by(id: params[:id])
-    favorites.status = "removed"
-    favorites.save
+    favorites.delete
     render json: {status: "Favorite removed."}
   end
+
 end

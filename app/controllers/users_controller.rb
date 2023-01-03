@@ -4,8 +4,8 @@ class UsersController < ApplicationController
 
 
   def index
-    users = User.all
-    render json: users.as_json
+    @users = User.all
+    render :index
   end
 
   def show
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find_by(id: params["id"])
+    user = User.find_by(id: params[:id])
 
     user.first_name = params["first_name"] || user.first_name
     user.last_name = params["last_name"] || user.last_name
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find_by(id: params["id"])
+    user = User.find_by(id: params[:id])
     user.delete
       render json: {message: "User successfully deleted."}
   end
