@@ -19,6 +19,20 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+### USERS UPDATE
+
+{
+  "first_name":,
+  "last_name":,
+  "email":,
+  "image_url":,
+  "phone":,
+  "birth_date":,
+  "home_address":,
+  "bio":,
+
+}
+
 ### SESSIONS CREATE (LOG IN)
 
 POST http://localhost:3000/sessions.json
@@ -50,15 +64,15 @@ Authorization: Bearer {{admin-jwt}}
 
 ### EVENTS UPDATE
 
-PATCH http://localhost:3000/events/2.json
+PATCH http://localhost:3000/events/3.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
 {
-    "name": "Test",
+    "name": "Test 2",
     "description": "Test Text",
     "address": "1234 N Happy Rd, Phoenix, AZ 85251",
-    "image_url": "www.yahoo.com",
+    "image_url": "www.google.com" ,
     "start_time": "2023-04-01",
     "end_time": "2023-04-02"
 }
