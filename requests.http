@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4NjczMTV9.OaV4BinnUV7ujdfQU8YiyFj_QOCHKO_nOMbpm95WrjA
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
 
 ### USERS INDEX 
@@ -39,7 +39,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "amanda@example.com",
+  "email": "mark@example.com",
   "password": "password"
 }
 
@@ -64,15 +64,11 @@ Authorization: Bearer {{admin-jwt}}
 
 ### EVENTS UPDATE
 
-PATCH http://localhost:3000/events/6.json
+PATCH http://localhost:3000/events/4.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
 {
-    "name": "Test 3",
-    "description": "Test Text",
-    "address": "1234 N Happy Rd, Phoenix, AZ 85251",
-    "image_url": "www.google.com" ,
     "start_time": "2023-04-01",
     "end_time": "2023-04-02"
 }
@@ -81,7 +77,7 @@ Authorization: Bearer {{admin-jwt}}
 ### EVENTS DESTROY
 
 
-DELETE http://localhost:3000/events/6.json
+DELETE http://localhost:3000/events/13.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
