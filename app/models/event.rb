@@ -18,7 +18,7 @@ def favorite_count
 end
 
 
-# start_time.strftime("%Y %m")
+
 
 
 end
