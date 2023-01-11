@@ -1,8 +1,11 @@
 @users.map do |user|
 
   {
-    name: user.full_name,
-    image_url: user.image_url
+    first_name: user.first_name,
+    last_name: user.last_name,
+    image_url: user.image_url,
+    email: user.email,
+    bio: user.bio
   }
 
 end

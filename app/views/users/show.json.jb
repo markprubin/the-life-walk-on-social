@@ -1,5 +1,9 @@
 {
   id: @user.id,
-  name: @user.full_name,
+  first_name: @user.first_name,
+  last_name: @user.last_name,
+  image_url: @user.image_url,
+  email: @user.email,
+  bio: @user.bio,
   favorited_events: @user.favorite_events
 }

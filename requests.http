@@ -1,9 +1,16 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzM0NjEzNjF9.EaGDYZRoqUpwjV-tG99rhzxNqocFTIkHPmd_9VwhF2k
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzM1NDU1NzJ9.6U6yV4A-PR_dDfP4Wbp2pQj_WwBSdLSxYSM6He-aA-w
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
 
 ### USERS INDEX 
 
 GET http://localhost:3000/users.json
+
+
+### USERS DESTROY 
+
+DELETE http://localhost:3000/users/13.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
 
 
 ### USERS CREATE (SIGN UP)
@@ -12,25 +19,23 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "first_name": "Amanda",
-  "last_name": "HaleNo",
-  "email": "amanda@example.com",
+  "first_name": "Owen",
+  "last_name": "Wilsomn",
+  "email": "owen@wow.com",
+  "image_url": 
+  "https://ih1.redbubble.net/image.257196091.5010/raf,750x1000,075,t,FFFFFF:97ab1c12de.u2.jpg",
   "password": "password",
   "password_confirmation": "password"
 }
 
 ### USERS UPDATE
 
-{
-  "first_name":,
-  "last_name":,
-  "email":,
-  "image_url":,
-  "phone":,
-  "birth_date":,
-  "home_address":,
-  "bio":,
+PATCH http://localhost:3000/users/2.json
+Content-Type: application/json
 
+
+{
+  "bio": "Whatever you do, DO NOT TRAVEL WITH TOM HANKS. IT WILL NOT END WELL.",
 }
 
 ### SESSIONS CREATE (LOG IN)
