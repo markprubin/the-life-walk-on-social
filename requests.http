@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzI4NjczMTV9.OaV4BinnUV7ujdfQU8YiyFj_QOCHKO_nOMbpm95WrjA
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzM0NjEzNjF9.EaGDYZRoqUpwjV-tG99rhzxNqocFTIkHPmd_9VwhF2k
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
 
 ### USERS INDEX 
@@ -64,7 +64,7 @@ Authorization: Bearer {{admin-jwt}}
 
 ### EVENTS UPDATE
 
-PATCH http://localhost:3000/events/4.json
+PATCH http://localhost:3000/events/12.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
