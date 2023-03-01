@@ -1,5 +1,5 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzM1NDU1NzJ9.6U6yV4A-PR_dDfP4Wbp2pQj_WwBSdLSxYSM6He-aA-w
-@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2NzI4NjIyNjd9.DNI3Cd1YwzB1fgyLTNXFhQ_1TcEOQ5GMdFOrUvAmXC4
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzcyODQ4NjN9.rcc-Tx4O-0o7RnwYzOPpuVVNlcQk3Vf3GVyy3bOGzYw
+@user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNjc3MjgxNjIyfQ.OwDoXyERBXRaG_7kvdCOK5KD6VMQaiGynb-jRUVZt9k
 
 ### USERS INDEX 
 
@@ -30,12 +30,12 @@ Content-Type: application/json
 
 ### USERS UPDATE
 
-PATCH http://localhost:3000/users/2.json
+PATCH http://localhost:3000/users/1.json
 Content-Type: application/json
 
 
 {
-  "bio": "Whatever you do, DO NOT TRAVEL WITH TOM HANKS. IT WILL NOT END WELL.",
+  "first_name": "John"
 }
 
 ### SESSIONS CREATE (LOG IN)
@@ -91,7 +91,7 @@ Authorization: Bearer {{admin-jwt}}
 
 GET http://localhost:3000/favorites.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{user-jwt}}
 
 ### FAVORITE CREATE
 
@@ -105,7 +105,7 @@ Authorization: Bearer {{admin-jwt}}
 
 ### FAVORITE DESTROY
 
-DELETE http://localhost:3000/favorites/6.json
+DELETE http://localhost:3000/favorites/53.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 

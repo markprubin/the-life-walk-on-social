@@ -1,11 +1,8 @@
-@users.map do |user|
-
-  {
-    first_name: user.first_name,
-    last_name: user.last_name,
-    image_url: user.image_url,
-    email: user.email,
-    bio: user.bio
-  }
-
-end
+{
+  id: @users.id,
+  first_name: @users.first_name,
+  last_name: @users.last_name,
+  image_url: @users.image_url,
+  email: @users.email,
+  bio: @users.bio,
+}

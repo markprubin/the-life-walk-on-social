@@ -1,7 +1,5 @@
-@favorites.map do |favorite|
   {
-    id: favorite.id,
-    name: favorite.name,
+    event: @newevents
   }
 
 end

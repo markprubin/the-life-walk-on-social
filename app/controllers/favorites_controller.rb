@@ -1,8 +1,18 @@
 class FavoritesController < ApplicationController
+  
  
   def index
-    favorites = current_user.favorites
-    render json: favorites.as_json
+  
+    # favorites = Favorite.all
+    # render json: favorites.as_json
+
+     favorites = Favorite.where(user_id: current_user.id)
+     newevents = favorites.map do |favorite|
+      Event.find_by(id: favorite.event_id)
+     end
+
+     render json: newevents.as_json
+
   end
 
   def create

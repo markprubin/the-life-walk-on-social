@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+
+    @users = User.find_by(id: current_user.id)
     render :index
+    
   end
 
   def show

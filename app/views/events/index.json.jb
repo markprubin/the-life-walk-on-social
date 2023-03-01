@@ -8,6 +8,5 @@
     start_time: event.start_event,
     end_time: event.end_event,
     favorites: event.favorite_count,
-    favorites_list: event.favorites
   }
 end
