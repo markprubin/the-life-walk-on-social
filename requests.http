@@ -35,7 +35,7 @@ Content-Type: application/json
 
 
 {
-  "first_name": "John"
+  "first_name": "Mark"
 }
 
 ### SESSIONS CREATE (LOG IN)

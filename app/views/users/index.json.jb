@@ -4,5 +4,9 @@
   last_name: @users.last_name,
   image_url: @users.image_url,
   email: @users.email,
+  phone: @users.phone,
+  birth_date: @users.birth_date,
+  home_address: @users.home_address,
   bio: @users.bio,
+  favorites: @users.favorite_events
 }
