@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzcyODQ4NjN9.rcc-Tx4O-0o7RnwYzOPpuVVNlcQk3Vf3GVyy3bOGzYw
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjcyODZ9.XR4eU5vnCm0uHbsDRqh2OkxJJh7sAjuKk5n0DLI7rmU
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNjc3MjgxNjIyfQ.OwDoXyERBXRaG_7kvdCOK5KD6VMQaiGynb-jRUVZt9k
 
 ### USERS INDEX 
@@ -109,3 +109,20 @@ DELETE http://localhost:3000/favorites/53.json
 Content-Type: application/json
 Authorization: Bearer {{admin-jwt}}
 
+
+### TASK CREATE
+
+POST http://localhost:3000/tasks.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
+
+{
+  "title": "Make Breakfast",
+  "user_id": 1,
+  "status": false
+}
+### TASK DESTROY
+
+DELETE http://localhost:3000/tasks/1.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}

@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 #EVENTS
 resources :events
 
+#TASKS
+
+get "/tasks" => "tasks#index"
+post "/tasks" => "tasks#create"
+delete "/tasks/:id" => "tasks#destroy"
+
 
 #FAVORITES
 
