@@ -7,6 +7,7 @@ resources :events
 
 get "/tasks" => "tasks#index"
 post "/tasks" => "tasks#create"
+patch "/tasks/:id" => "tasks#update"
 delete "/tasks/:id" => "tasks#destroy"
 
 

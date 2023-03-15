@@ -114,7 +114,6 @@ Authorization: Bearer {{admin-jwt}}
 
 POST http://localhost:3000/tasks.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
 
 {
   "title": "Make Breakfast",
@@ -125,4 +124,12 @@ Authorization: Bearer {{admin-jwt}}
 
 DELETE http://localhost:3000/tasks/1.json
 Content-Type: application/json
-Authorization: Bearer {{admin-jwt}}
+
+### TASK UPDATE
+
+PATCH http://localhost:3000/tasks/2.json
+Content-Type: application/json
+
+{
+  "title": "Make Lunch"
+}

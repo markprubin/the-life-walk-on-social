@@ -22,6 +22,20 @@ class TasksController < ApplicationController
     end
   end
 
+  def update
+    task = Task.find_by(id: params[:id])
+
+    task.title = params["title"] || task.title
+    # task.status = false
+
+    if task.save
+      render json: task.as_json
+    else
+      render json: {errors: task.errors.full_messages}, status: :unprocessable_entity
+    end
+
+  end
+
   def destroy
 
     task = Task.find_by(id: params[:id])
