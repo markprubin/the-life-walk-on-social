@@ -131,5 +131,5 @@ PATCH http://localhost:3000/tasks/2.json
 Content-Type: application/json
 
 {
-  "title": "Make Lunch"
+  "title": "Make Dinner"
 }

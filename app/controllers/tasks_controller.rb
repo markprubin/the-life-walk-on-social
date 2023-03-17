@@ -12,7 +12,7 @@ class TasksController < ApplicationController
     task = Task.new(
       title: params[:title],
       user_id: current_user.id,
-      status: false
+      status: params[:status]
     )
 
     if task.save
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     task = Task.find_by(id: params[:id])
 
     task.title = params["title"] || task.title
-    # task.status = false
+    
 
     if task.save
       render json: task.as_json
