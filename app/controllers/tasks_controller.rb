@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     task = Task.find_by(id: params[:id])
 
     task.title = params["title"] || task.title
-    
+    task.status = params["status"] || task.status
 
     if task.save
       render json: task.as_json

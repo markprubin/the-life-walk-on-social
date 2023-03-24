@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzg5MjcyODZ9.XR4eU5vnCm0uHbsDRqh2OkxJJh7sAjuKk5n0DLI7rmU
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzk3MTA0ODR9.20MLTWnO72Vfey8sTjN1NOpZkBsMWg3L6yt_iwdVdNE
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNjc3MjgxNjIyfQ.OwDoXyERBXRaG_7kvdCOK5KD6VMQaiGynb-jRUVZt9k
 
 ### USERS INDEX 
@@ -119,6 +119,7 @@ Content-Type: application/json
   "title": "Make Breakfast",
   "user_id": 1,
   "status": false
+  
 }
 ### TASK DESTROY
 
