@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Nzk3MTA0ODR9.20MLTWnO72Vfey8sTjN1NOpZkBsMWg3L6yt_iwdVdNE
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE0MjgwMjd9.O539pW55AlUlbBxc7reXk3HLIF8cOjpsAIkqshX_dUc
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNjc3MjgxNjIyfQ.OwDoXyERBXRaG_7kvdCOK5KD6VMQaiGynb-jRUVZt9k
 
 ### USERS INDEX 

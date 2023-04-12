@@ -8,7 +8,8 @@ class FavoritesController < ApplicationController
 
      favorites = Favorite.where(user_id: current_user.id)
      newevents = favorites.map do |favorite|
-      Event.find_by(id: favorite.event_id)
+      {:event => Event.find_by(id: favorite.event_id),
+      :table_id => favorite.id}
      end
 
      render json: newevents.as_json
