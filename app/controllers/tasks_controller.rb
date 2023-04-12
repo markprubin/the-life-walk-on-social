@@ -12,7 +12,7 @@ class TasksController < ApplicationController
     task = Task.new(
       title: params[:title],
       user_id: current_user.id,
-      status: params[:status]
+      status: params[:status] || false
     )
 
     if task.save
