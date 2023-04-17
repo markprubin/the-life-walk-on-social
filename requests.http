@@ -1,10 +1,11 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE0MjgwMjd9.O539pW55AlUlbBxc7reXk3HLIF8cOjpsAIkqshX_dUc
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2ODE4NTM0Njd9.1B2p_MnDSeQTdHlCrZzZRrzPEHnw3MXy4p-qq0bNRRU
 @user-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNCwiZXhwIjoxNjc3MjgxNjIyfQ.OwDoXyERBXRaG_7kvdCOK5KD6VMQaiGynb-jRUVZt9k
 
 ### USERS INDEX 
 
 GET http://localhost:3000/users.json
-
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
 
 ### USERS DESTROY 
 
