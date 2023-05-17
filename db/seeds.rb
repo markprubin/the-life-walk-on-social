@@ -13,5 +13,5 @@ User.create!(first_name: "Tom", last_name: "Hanks", email: "wilson@fedex.com", p
 
 ##EVENTS
 
-Event.create!(name: "Inaugural Meet & Greet", description: "The very first meet up for former athletes.", address: "1950 W Rose Garden Ln #130, Phoenix, AZ 85027", image_url: "https://journal.jabian.com/wp-content/uploads/2017/06/On-The-Ball-Former-Athletes-in-the-Workplace-banner-1280x751.png", start_time: "2023-03-01T20:00:00.000", end_time: "2023-03-02T00:00:00.000")
+Event.create!(name: "Inaugural Meet & Greet", description: "The very first meet up for former athletes.", address: "1950 W Rose Garden Ln #130, Phoenix, AZ 85027", image_url: "https://journal.jabian.com/wp-content/uploads/2017/06/On-The-Ball-Former-Athletes-in-the-Workplace-banner-1280x751.png", start_time: "2023-07-01T20:00:00.000", end_time: "2023-07-02T00:00:00.000")
 

@@ -81,6 +81,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: the_life_walk_on_social_production
   username: the_life_walk_on_social
   password: <%= ENV["THE_LIFE_WALK_ON_SOCIAL_DATABASE_PASSWORD"] %>

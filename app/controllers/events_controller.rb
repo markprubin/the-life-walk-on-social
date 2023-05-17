@@ -51,6 +51,7 @@ class EventsController < ApplicationController
 
   def destroy
     event = Event.find_by(id: params[:id])
+    # deleting all favorites with same event id
     event.destroy
     render json: {message: "Event successfully removed."}
   end
