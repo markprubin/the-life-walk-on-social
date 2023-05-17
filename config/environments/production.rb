@@ -23,6 +23,8 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV["RENDER"].present?
 
+
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
@@ -56,6 +58,8 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "the_life_walk_on_social_production"
 
   config.action_mailer.perform_caching = false
+
+  config.assets.compile = true
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

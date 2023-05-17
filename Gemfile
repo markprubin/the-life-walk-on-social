@@ -51,3 +51,5 @@ gem 'jwt'
 gem 'jb'
 
 gem 'time'
+
+gem 'sprockets-rails', :require => 'sprockets/railtie'
